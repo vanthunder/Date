@@ -7,7 +7,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import java.net.URL;
 import java.text.DateFormat;
@@ -22,11 +24,15 @@ import javafx.scene.control.TextField;
  
 public class SampleController implements Initializable {
  
+   private int counter;
+   private int value = 0;
+	
    @FXML
    private Button DateButton;
   
    @FXML
    private TextField TextField;
+   
   
    @Override
    public void initialize(URL location, ResourceBundle resources) {
@@ -48,9 +54,21 @@ public class SampleController implements Initializable {
         // Model Data
         String dateTimeString = df.format(now);
         
+        
+        if(counter == 0 )
+        {
         // Show in VIEW
+        TextField.setAlignment(Pos.CENTER);
         TextField.setText(dateTimeString);
-      
+        counter++;
+        }
+        else
+        if(counter >= 0)
+        {
+        TextField.setAlignment(Pos.CENTER);
+        TextField.setText("Das Datum wurde bereits eingetragen!");
+        counter=0;
+        }
    }
   
 }
