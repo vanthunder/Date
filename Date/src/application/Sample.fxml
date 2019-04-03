@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <AnchorPane prefHeight="324.0" prefWidth="432.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="DateButton" layoutX="173.0" layoutY="90.0" mnemonicParsing="false" onAction="#showDate" text="Show Date">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="TextField" layoutX="142.0" layoutY="162.0" promptText="Please click the button!" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
